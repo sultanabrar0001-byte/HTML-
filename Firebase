@@ -1,0 +1,18 @@
+// firebase-config.js
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+import { getDatabase, ref, set, onValue, update } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBz4nIiuD7QlAFwm946aQRFAuBPYNRJ2h0",
+  authDomain: "smarthome-iot-a07d5.firebaseapp.com",
+  databaseURL: "https://smarthome-iot-a07d5-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "smarthome-iot-a07d5",
+  storageBucket: "smarthome-iot-a07d5.firebasestorage.app",
+  messagingSenderId: "908816956377",
+  appId: "1:908816956377:web:10176aca22d64fa16237c8"
+};
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+
+export { database, ref, set, onValue, update };
